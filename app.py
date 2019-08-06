@@ -10,7 +10,7 @@ from tensorflow.keras.models import load_model
 from keras.preprocessing import image
 
 # Flask utils
-from flask import Flask, redirect, url_for, request, render_template
+from flask import Flask, redirect, url_for, request, render_template, jsonify
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
 
@@ -55,7 +55,7 @@ def c_scoref(vals):
         c_score = vals[0]/sum(vals) * 100
     print("Prediction:", prediction)
     print("Confidence score:",str(round(c_score,2)) + "%\n")
-    return (prediction, c_score)
+    return (prediction, round(c_score,2))
 
 
 @app.route('/predictVGG16', methods=['GET', 'POST'])
@@ -68,7 +68,14 @@ def predictVGG16():
         result = c_scoref(v)
 
         # decode the results into a list of tuples (class, description, probability)
-        return str(result[0])
+        pred = str(result[0])
+        c_val = str(result[1])
+
+        print(pred, c_val)
+
+        res = [pred, c_val]
+
+        return jsonify(res)
     return None
 
 @app.route('/', methods=['GET'])

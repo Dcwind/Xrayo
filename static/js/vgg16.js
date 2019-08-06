@@ -37,24 +37,26 @@ $(document).ready(function() {
     $(this).hide();
     $(".loaderVGG16").show();
 
-    // Make prediction by calling api /predictVGG16
-    $.ajax({
-      type: "POST",
-      url: "/predictVGG16",
-      data: form_data,
-      contentType: false,
-      cache: false,
-      processData: false,
-      async: true,
-      success: function(data) {
-        // Get and display the result
-        console.log(data);
-        $(".loaderVGG16").hide();
-        $("#resultVGG16").fadeIn(600);
-        $("#resultVGG16").text(" Prediction:  " + data);
-        $("#resultVGG17").text(" Confidence Score:  " + data);
-        console.log("VGG16 Success!");
-      }
+        // Make prediction by calling api /predictVGG16
+        $.ajax({
+            type: 'POST',
+            url: '/predictVGG16',
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            async: true,
+            success: function (data) {
+                // Get and display the result
+                console.log(data);
+                $('.loaderVGG16').hide();
+                $('#resultVGG16').fadeIn(600);
+                $('#resultVGG16').text('Prediction:  ' + data[0]);
+                $('#resultVGG17').fadeIn(600);
+                $('#resultVGG17').text('Confidence Score:  ' + data[1]);
+                console.log('VGG16 Success!');
+            },
+        });
     });
   });
 });
