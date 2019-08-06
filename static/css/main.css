@@ -1,3 +1,62 @@
+:root {
+  --white: white;
+  --white-gray: #f1f1f1;
+  --gray: #939498;
+  --green-gray: #66929a;
+  --green: #4e919b;
+}
+
+@font-face {
+  font-family: Posterama;
+  src: url(../fonts/PosteramaRegular.ttf);
+}
+
+@font-face {
+  font-family: PosteramaBold;
+  src: url(../fonts/PosteramaBold.ttf);
+}
+
+@font-face {
+  font-family: PosteramaBlack;
+  src: url(../fonts/PosteramaBlack.ttf);
+}
+
+@font-face {
+  font-family: PosteramaLight;
+  src: url(../fonts/PosteramaLight.ttf);
+}
+
+@font-face {
+  font-family: PosteramaSemiBold;
+  src: url(../fonts/PosteramaSemiBold.ttf);
+}
+
+@font-face {
+  font-family: PosteramaThin;
+  src: url(../fonts/PosteramaThin.ttf);
+}
+
+@font-face {
+  font-family: PosteramaUltraBlack;
+  src: url(../fonts/PosteramaUltraBlack.ttf);
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Posterama;
+}
+
+.navbar-light {
+  color: var(--green);
+  font-family: PosteramaSemiBold;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .img-preview {
     width: 256px;
     height: 256px;
