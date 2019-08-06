@@ -45,11 +45,12 @@ $(document).ready(function () {
             async: true,
             success: function (data) {
                 // Get and display the result
-                console.log(data)
+                console.log(data);
                 $('.loaderVGG16').hide();
                 $('#resultVGG16').fadeIn(600);
-                $('#resultVGG16').text(' Prediction:  ' + data);
-                $('#resultVGG17').text(' Confidence Score:  ' + data);
+                $('#resultVGG16').text('Prediction:  ' + data[0]);
+                $('#resultVGG17').fadeIn(600);
+                $('#resultVGG17').text('Confidence Score:  ' + data[1]);
                 console.log('VGG16 Success!');
             },
         });
