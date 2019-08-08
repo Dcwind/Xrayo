@@ -6,9 +6,9 @@ $ pip install pipenv
 
 Install the project dependencies
 
-$ git clone https://github.com/Dcwind/Xrayo.git 
-$ cd Xrayo
-$ pipenv install 
+      $ git clone https://github.com/Dcwind/Xrayo.git 
+      $ cd Xrayo
+      $ pipenv install 
 
 
 Starting the Keras Server
