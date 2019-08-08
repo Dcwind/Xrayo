@@ -33,6 +33,10 @@ $(document).ready(function() {
   $("#btn-predict-VGG16").click(function() {
     var form_data = new FormData($("#upload-file-VGG16")[0]);
 
+    if (form_data[0] == "PNEUMONIA") {
+      $("#resultVGG16").css("background-color", "#C65050");
+    }
+
     // Show loading animation
     $(this).hide();
     $(".loaderVGG16").show();
@@ -53,7 +57,7 @@ $(document).ready(function() {
         $("#resultVGG16").fadeIn(600);
         $("#resultVGG16").text("Prediction:  " + data[0]);
         $("#resultVGG17").fadeIn(600);
-        $("#resultVGG17").text("Confidence Score:  " + data[1]);
+        $("#resultVGG17").text("Confidence Score:  " + data[1] + "%");
         console.log("VGG16 Success!");
       }
     });
