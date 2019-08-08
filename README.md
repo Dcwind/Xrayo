@@ -1,10 +1,10 @@
 Clone the repository
 
-$ git clone https://github.com/Dcwind/Xrayo.git
+      $ git clone https://github.com/Dcwind/Xrayo.git
 
 Install pipenv
 
-$ pip install pipenv
+      $ pip install pipenv
 
 Install the project dependencies
  
