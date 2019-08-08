@@ -43,7 +43,7 @@ def prepare(filepath):
     
 
 def c_scoref(vals):
-    print(vals)
+    # print(vals)
     #confidence score
     # [Dog, Cat]    
 
@@ -53,8 +53,10 @@ def c_scoref(vals):
     else:
         prediction = "NORMAL"
         c_score = vals[0]/sum(vals) * 100
+
     print("Prediction:", prediction)
     print("Confidence score:",str(round(c_score,2)) + "%\n")
+        
     return (prediction, round(c_score,2))
 
 
@@ -71,7 +73,7 @@ def predictVGG16():
         pred = str(result[0])
         c_val = str(result[1])
 
-        print(pred, c_val)
+        #print(pred, c_val)
 
         res = [pred, c_val]
 
