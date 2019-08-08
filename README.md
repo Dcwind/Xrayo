@@ -6,7 +6,7 @@ $ pip install pipenv
 
 Install the project dependencies
 
-$ git clone https://github.com/Dcwind/Xrayo.git
+$ git clone https://github.com/Dcwind/Xrayo.git 
 $ cd Xrayo
 $ pipenv install 
 
